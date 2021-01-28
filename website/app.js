@@ -58,7 +58,7 @@ const updateUi = (data) => {
 };
 // fetch data from api and data from client side
 const generate = async () => {
-  let apiUrl = `http://api.openweathermap.org/data/2.5/weather?zip=${zipCode.value}${apiKey}`;
+  const apiUrl = `http://api.openweathermap.org/data/2.5/weather?zip=${zipCode.value}${apiKey}`;
   let response = await fetch(apiUrl);
   try {
     let allData = await response.json();
